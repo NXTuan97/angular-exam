@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<div class="section">
+    <div class="container">
+      <div class="col-content">
+        <div class="row">
+          <div class="col-lg-3" id="sidebar">
+            <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
+              <h3>Favorites</h3>
+              <div class="content">
+                <a href="#" class="w3-bar-item w3-button">Inbox</a>
+                <a href="#" class="w3-bar-item w3-button">Sent items</a>
+              </div>
+              <h3>John</h3>
+              <div class="content">
+                <a href="#" class="w3-bar-item w3-button">Inbox</a>
+                <a href="#" class="w3-bar-item w3-button">Drafts</a>
+                <a href="#" class="w3-bar-item w3-button">Deleted Items</a>
+                <a href="#" class="w3-bar-item w3-button">Sent Items</a>
+                <a href="#" class="w3-bar-item w3-button">Outbox</a>
+              </div>
+            </div>
+            <script>
+              function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+              }
 
-</body>
-</html>
+              function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+              }
+            </script>
+          </div>
+          <div class="col-lg-9" id="navPage">
+            <div class="col-content">
+              <div id="box">
+                <h4>{{file.name}}</h4>
+                <p>{{file.status}}</p>
+                <p>{{file.help}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
