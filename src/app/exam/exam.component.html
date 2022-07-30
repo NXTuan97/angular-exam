@@ -1,43 +1,38 @@
-<div class="section">
-    <div class="container">
-      <div class="col-content">
-        <div class="row">
-          <div class="col-lg-3" id="sidebar">
-            <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" id="mySidebar">
-              <h3>Favorites</h3>
-              <div class="content">
-                <a href="#" class="w3-bar-item w3-button">Inbox</a>
-                <a href="#" class="w3-bar-item w3-button">Sent items</a>
-              </div>
-              <h3>John</h3>
-              <div class="content">
-                <a href="#" class="w3-bar-item w3-button">Inbox</a>
-                <a href="#" class="w3-bar-item w3-button">Drafts</a>
-                <a href="#" class="w3-bar-item w3-button">Deleted Items</a>
-                <a href="#" class="w3-bar-item w3-button">Sent Items</a>
-                <a href="#" class="w3-bar-item w3-button">Outbox</a>
-              </div>
-            </div>
-            <script>
-              function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-              }
+<main class="d-flex flex-nowrap">
+  <div class="flex-shrink-0 bg-white" style="width: 280px;">
 
-              function w3_close() {
-                document.getElementById("mySidebar").style.display = "none";
-              }
-            </script>
-          </div>
-          <div class="col-lg-9" id="navPage">
-            <div class="col-content">
-              <div id="box">
-                <h4>{{file.name}}</h4>
-                <p>{{file.status}}</p>
-                <p>{{file.help}}</p>
-              </div>
-            </div>
-          </div>
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+          <i class="fa-solid fa-angle-down me-1"></i>Favorites
+        </button>
+        <div class="collapse show" id="home-collapse">
+          <ul class="btn-toggle-nav  pb-1">
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Inbox</a></li>
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none text-white bg-primary">Sent Items</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          <i class="fa-solid fa-angle-down me-1"></i>John
+        </button>
+        <div class="collapse" id="dashboard-collapse">
+          <ul class="btn-toggle-nav pb-1 ">
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Inbox</a></li>
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Drafts</a></li>
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Deleted Items</a></li>
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Sent Items</a></li>
+            <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Outbox</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
+  <div class="col">
+      <h4>{{file.name}}</h4>
+      <p>{{file.status}}</p>
+      <p>{{file.help}}</p>
+  </div>
+</main>
+
