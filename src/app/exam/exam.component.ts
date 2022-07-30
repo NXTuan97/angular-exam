@@ -6,9 +6,6 @@ import {IExam} from "../interface/exam.interface";
   templateUrl: './exam.component.html'
 })
 export class ExamComponent{
- @Input()
-  file!: IExam;
-
   examArray: IExam[]=[
     {name:'Gemma Roberson', status:'Apology for late response email', help:'Hello Colette Wooten'},
     {name:'Anna Garza', status:'Application for job title', help:'Hello Kerry Best'},

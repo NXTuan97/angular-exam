@@ -29,10 +29,10 @@
       </li>
     </ul>
   </div>
-  <div class="col">
-      <h4>{{file.name}}</h4>
-      <p>{{file.status}}</p>
-      <p>{{file.help}}</p>
+  <div class="col" *ngFor="let f of examArray">
+      <h4>{{f.name}}</h4>
+      <p>{{f.status}}</p>
+      <p>{{f.help}}</p>
   </div>
 </main>
 
